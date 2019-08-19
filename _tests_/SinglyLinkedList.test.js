@@ -42,4 +42,22 @@ describe("singly linked list", () => {
     expect(popped).toBe(3);
     expect(list.getLast()).toBe(2);
   });
+
+  it("should return value inserted", () => {
+    list.push(1);
+    list.push(2);
+    list.push(3);
+    const newNodeVal = list.insertAt("new value", 2);
+    expect(list.get(2)).toBe("new value");
+    expect(newNodeVal).toBe("new value");
+  });
+
+  it("should return value removed when removing a node", () => {
+    list.push(1);
+    list.push(2);
+    list.push(3);
+    const deletedNodeVal = list.removeAt(2);
+    expect(deletedNodeVal).toBe(2);
+    expect(list.get(2)).toBe(3);
+  });
 });

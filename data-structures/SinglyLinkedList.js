@@ -72,4 +72,33 @@ module.exports = class SinglyLinkedList {
     currentNode.next = null;
     return deletedTail.val;
   }
+
+  insertAt(val, position) {
+    let currentNode = this.head;
+    let i = 1;
+    while (i < position - 1) {
+      currentNode = currentNode.next;
+      i++;
+    }
+
+    const next = currentNode.next.next;
+    currentNode.next = new Node(val);
+    currentNode.next.next = next;
+
+    return currentNode.next.val;
+  }
+
+  removeAt(position) {
+    let currentNode = this.head;
+    let i = 1;
+    while (i < position - 1) {
+      currentNode = currentNode.next;
+      i++;
+    }
+    const deletedNode = currentNode.next;
+    const next = currentNode.next.next;
+    currentNode.next = next;
+
+    return deletedNode.val;
+  }
 };
