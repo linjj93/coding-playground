@@ -5,7 +5,7 @@ const selectionSort = array => {
   for (let i = 0; i < len; i++) {
     let minimum = array[i];
     let swapIndex = i;
-    for (let j = i; j < len; j++) {
+    for (let j = i + 1; j < len; j++) {
       if (array[j] < minimum) {
         minimum = array[j];
         swapIndex = j;
