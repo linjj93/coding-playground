@@ -1,4 +1,4 @@
-const { BinaryMaxHeap } = require("../Data Structures/Binary-Heap");
+const { BinaryMaxHeap } = require("../data-structures/Binary-Heap");
 
 describe("Binary Max Heap", () => {
   it("should return root when calling for highest priority", () => {

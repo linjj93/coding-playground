@@ -1,4 +1,4 @@
-const flatten = require("../Katas/flatten");
+const flatten = require("../katas/flatten");
 
 describe("flatten", () => {
   it("should flatten 1-dimensional array", () => {
